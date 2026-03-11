@@ -66,12 +66,12 @@ function renderProjects(projectsToRender) {
                 'Portfolio': 'A personal data analyst portfolio website showcasing projects, skills, and interactive resume.',
                 'ai-stock-direction-prediction': 'Machine learning model built with Python to predict the directional movement of stock prices using historical market data.',
                 'Netflix_Project_Analysis': 'Comprehensive data analysis of Netflix\'s catalog exploring content trends, ratings, and genre distributions.',
-                'SQL_Retail_Sales_Analysis': 'SQL-based analysis of retail sales data to extract insights on revenue, top customers, and product performance.',
+                'SQL_Retail_Sales_Analysis-': 'SQL-based analysis of retail sales data to extract insights on revenue, top customers, and product performance.',
                 'Pizza-Sales-Report': 'Data analysis and reporting focusing on pizza sales data to optimize operations and identify specific sales patterns.'
             };
             
             for (const [key, desc] of Object.entries(descriptions)) {
-                if (name.includes(key)) return desc;
+                if (name === key || name.startsWith(key)) return desc;
             }
             return 'No description provided.';
         };
